@@ -1,18 +1,20 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { Busser } from "./bustider";
 import { Nyheder } from './nyheder';
 import { Menu } from './ugensmenu';
 import { Vejr } from './vejr';
-import { Aktiv } from './aktiv';
+import { ClassSchedule } from './aktiv';
 import './index.css'
+import { BusSchedule } from './bustider';
+import { Time } from './time';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Menu />
-    <Vejr />
-    <Nyheder />
-    <Aktiv />
-    <Busser />
+  <Time/>
+  <Vejr />
+  <BusSchedule/>
+  <ClassSchedule />
+  <Menu className="bg-blue-500"/>
+  <Nyheder />
   </StrictMode>,
 )

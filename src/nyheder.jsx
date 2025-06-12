@@ -11,10 +11,11 @@ export function Nyheder() {
         }
         fetchData();
     }, [setData]);
+    
     return (<div>
     <h1>nyheder</h1>
-    {Array.isArray(Data) && Data.map(item => (
-        <p key={item.id}>{item.title}</p>
+    {Array.isArray(Data.items) && Data.items.map(items => (
+        <p key={items.title}>{items.title}</p>
     ))}
     </div>)
 }

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export function Menu() {
+export function Menu({className}) {
     const [Data, setData] = useState([]);
     useEffect(() => {
         const fetchData = async () => {
@@ -13,12 +13,12 @@ export function Menu() {
         
         
     }, [setData]);
-    console.log(Data);
     
-    return (<div>
+    return (<div className={className}>
         <h1>ugens menu</h1>
         {Array.isArray(Data.Days) && Data.Days.map (Days => (
-            <h2 key={Days.Days}>{Days.Date}</h2>
+            <h2 key={Days.DayName}>{Days.DayName}:{Days.Dish}</h2>
+            
         ))}
     </div>)
-};
+    }; 
