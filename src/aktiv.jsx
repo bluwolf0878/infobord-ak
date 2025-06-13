@@ -47,7 +47,7 @@ function filterUpcomingClasses(classData) {
 }
 
 // React-komponent
-export function ClassSchedule() {
+export function ClassSchedule(className) {
     const [classes, setClasses] = useState([]);
 
     useEffect(() => {
@@ -61,7 +61,7 @@ export function ClassSchedule() {
     }, []);
 
     return (
-        <div>
+        <div className={className}>
             <h1>Kommende hold</h1>
             {classes.length === 0 ? (
                 <p>Ingen skemaer fundet...</p>

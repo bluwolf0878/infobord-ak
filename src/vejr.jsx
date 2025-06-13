@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export function Vejr() {
+export function Vejr(className) {
     const [data, setData] = useState(null);
 
     useEffect(() => {
@@ -24,7 +24,7 @@ export function Vejr() {
 
 
     return (
-        <div>
+        <div className={className}>
             <h2>{location}</h2>
             <img src={iconUrl} alt={description} />
             <p>{temperature}°C – {description}</p>

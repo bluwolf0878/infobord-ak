@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export const Time = () =>{
+export const Time = (className) =>{
   let time  = new Date().toLocaleTimeString()
 
   const [ctime,setTime] = useState(time)
@@ -9,5 +9,5 @@ export const Time = () =>{
     setTime(time)
   }
   setInterval(UpdateTime)
-  return <h1>{ctime}</h1>
+  return <h1 className="font-bold">{ctime}</h1>
 }

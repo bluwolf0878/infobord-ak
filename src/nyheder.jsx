@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export function Nyheder() {
+export function Nyheder(className) {
     const [Data, setData] = useState([])
     useEffect(() => {
         const fetchData = async () => {
@@ -12,7 +12,7 @@ export function Nyheder() {
         fetchData();
     }, [setData]);
     
-    return (<div>
+    return (<div className={className}>
     <h1>nyheder</h1>
     {Array.isArray(Data.items) && Data.items.map(items => (
         <p key={items.title}>{items.title}</p>

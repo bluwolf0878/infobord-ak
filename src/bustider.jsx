@@ -33,7 +33,7 @@ function filterAndSortBusTimes(busData, specificStops) {
 
 const specificStops = ['Øster Sundby Vej', 'Øster Uttrup Vej'];
 
-export function BusSchedule() {
+export function BusSchedule(className) {
     const [busTimes, setBusTimes] = useState([]);
 
     useEffect(() => {
@@ -50,7 +50,7 @@ export function BusSchedule() {
     }, []);
 
     return (
-        <div>
+        <div className={className}>
             <h1>Busafgange</h1>
             {busTimes.length === 0 ? (
                 <p>Ingen busdata tilgængelig</p>
